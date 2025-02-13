@@ -4,26 +4,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <title>Client First</title>
+
+    <!-- Link Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+
+    <!-- Link CDN Tailwinds -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+        /* Color */
+          --color-bgBtn: #1D2130;
+          --color-greyText: #525560;
+          /* Font */
+          --font-Ubuntu:Ubuntu;
+        }
+      </style>
 </head>
 
 <body">
-    <nav class="bg-white">
-        <div class="max-w-[1640px] mx-auto bg-slate-400 p-5 ">
-            <div class="flex items-center justify-between">
-                <h2 class="font-bold text-2xl">{Finsweet</h2>
-                <ul class="flex gap-5">
+    <nav>
+        <section class=" max-w-[1640px] mx-auto p-5 ">
+            <!-- Items Navbar Logo Link and Button -->
+            <article class=" flex items-center justify-between">
+                <h2 class="font-bold text-lg sm:text-2xl">{Finsweet</h2>
+                <ul class="flex justify-center items-center text-[10px] gap-5 sm:text-[16px]">
                     <li class="font-bold"><a href="#Home">Home</a></li>
-                    <li class="text-[#525560]"><a href="#About us">About us</a></li>
-                    <li class="text-[#525560]"><a href=" #What We Do">What We Do</a></li>
-                    <li class="text-[#525560]"><a href=" #Media">Media</a></li>
-                    <li class="text-[#525560]"><a href=" #Contract">Contract</a></li>
-                    <li><button>Donate</button></li>
+                    <li class="text-greyText"><a href="#About us">About us</a></li>
+                    <li class="text-greyText"><a href=" #What We Do">What We Do</a></li>
+                    <li class="text-greyText"><a href=" #Media">Media</a></li>
+                    <li class="text-greyText"><a href=" #Contract">Contract</a></li>
+                    <li><button
+                            class="bg-bgBtn text-white px-[20px] py-[10px] rounded-[4px] sm:px-[32px] sm:py-[12px] ">Donate</button>
+                    </li>
                 </ul>
-            </div>
-        </div>
+            </article>
+        </section>
     </nav>
+
+    <header>
+        <!-- Background Header -->
+        <section class="bg-[url(../Images/Header.png)] w-full h-[735px] bg-cover">
+            <!-- Title -->
+            <article class="flex flex-col gap-5 max-w-[1640px] mx-auto p-5">
+                <h1 class="text-white font-Ubunt mt-[125px] leading-[76.8px] w-[640px] h-[231px] text-[64px] ">
+                    Save
+                    the
+                    environment
+                    today for a
+                    better
+                    tomorrow
+                </h1>
+                <div class="flex gap-10"><button
+                        class="bg-white font-bold text-gray-900 py-[16px] px-[32px] rounded-[4px]">What We
+                        do</button>
+                    <div class="flex justify-center items-center gap-3">
+                        <img src="../Images//Play icon.png" alt="Icon Play">
+                        <p class="font-bold text-lg text-white">Play Video</p>
+                    </div>
+                </div>
+            </article>
+            <!-- Static Text -->
+            <article class="flex justify-between  items-center gap-5 max-w-[1640px] mx-auto p-5 mt-[80px]">
+                <p class=" font-bold text-lg text-white ">23,800 trees planted</p>
+                <hr class="w-[70%] text-white">
+                <p class=" font-bold text-lg text-white">25840 donations collected</p>
+            </article>
+        </section>
+    </header>
 
     </body>
 
