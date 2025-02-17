@@ -219,7 +219,7 @@
     </section>
 
     <!-- Project -->
-    <section class="max-w-[1640px] mx-auto p-5 mt-30 ">
+    <section class="max-w-[1640px] mx-auto p-5 mt-30 flex flex-col gap-10 ">
         <article class="flex gap-5 h-full">
             <div class="w-full flex gap-10 ">
                 <div class="w-[75px] pt-2">
@@ -266,9 +266,6 @@
                 </div>
             </div>
         </article>
-
-
-
     </section>
 
     <!-- Stats section -->
@@ -276,6 +273,7 @@
         <section class="max-w-[1640px] h-[567px] mx-auto p-5 mt-30 flex flex-col justify-center items-center">
             <article class="flex w-full">
                 <div class="w-full flex flex-col gap-8">
+                    <!-- Text Title -->
                     <div class="flex flex-col gap-5">
                         <h2 class="font-bold text-[48px] w-[640px] text-bgBtn leading-tight text-white">How we spend
                             your
@@ -285,55 +283,76 @@
                             where your money is
                             going and we pledge to be transparent.</p>
                     </div>
-                    <!--  -->
-                    <div class="flex flex-wrap justify-between  bg-yellow-300 w-full gap-5">
-                        <div class="flex w-full">
-                            <span class="flex gap-2">
-                                <div class="bg-[#BEF3C0] w-[16px] h-[16px] rounded-[4px] self-center"></div>
-                                <p class="text-white font-bold">40% planting trees</p>
-                            </span>
-                        </div>
-                        <div class="flex w-full">
-                            <span class="flex gap-2">
-                                <div class="bg-[#BEF3C0] w-[16px] h-[16px] rounded-[4px] self-center"></div>
-                                <p class="text-white font-bold">40% planting trees</p>
-                            </span>
-                        </div>
-                        <div class="flex w-full">
-                            <span class="flex gap-2">
-                                <div class="bg-[#BEF3C0] w-[16px] h-[16px] rounded-[4px] self-center"></div>
-                                <p class="text-white font-bold">40% planting trees</p>
-                            </span>
-                        </div>
-                        <div class="flex w-full">
-                            <span class="flex gap-2">
-                                <div class="bg-[#BEF3C0] w-[16px] h-[16px] rounded-[4px] self-center"></div>
-                                <p class="text-white font-bold">40% planting trees</p>
-                            </span>
-                        </div>
-                        <div class="flex w-full">
-                            <span class="flex gap-2">
-                                <div class="bg-[#BEF3C0] w-[16px] h-[16px] rounded-[4px] self-center"></div>
-                                <p class="text-white font-bold">40% planting trees</p>
-                            </span>
-                        </div>
-
-
-
-
+                    <!-- Stats Rows -->
+                    <div class="flex flex-wrap w-[600px] gap-5">
+                        <span class="flex gap-2 ">
+                            <div class="bg-[#BEF3C0] w-[16px] h-[16px] rounded-[4px] self-center"></div>
+                            <p class="text-white font-bold">40% planting trees</p>
+                        </span>
+                        <span class="flex gap-2 ">
+                            <div class="bg-[#AC94F1] w-[16px] h-[16px] rounded-[4px] self-center"></div>
+                            <p class="text-white font-bold">35% cleanliness program</p>
+                        </span>
+                        <span class="flex gap-2 ">
+                            <div class="bg-[#FFF0CA] w-[16px] h-[16px] rounded-[4px] self-center"></div>
+                            <p class="text-white font-bold">10% helping people</p>
+                        </span>
+                        <span class="flex gap-2 ">
+                            <div class="bg-[#F9CF64] w-[16px] h-[16px] rounded-[4px] self-center"></div>
+                            <p class="text-white font-bold">10% animal safety</p>
+                        </span>
+                        <span class="flex gap-2 ">
+                            <div class="bg-[#F38FBF] w-[16px] h-[16px] rounded-[4px] self-center"></div>
+                            <p class="text-white font-bold">5% feeding the poor</p>
+                        </span>
                     </div>
 
 
                 </div>
-                <!-- .... -->
-                <div class="w-full">
-                    1
+                <!-- Chart -->
+                <div class="w-full flex justify-center items-center">
+                    <div class="flex items-center justify-center w-96 h-96">
+                        <svg class="w-100 h-100" viewBox="0 0 36 36">
+                            <!-- Background Circle -->
+                            <circle class="text-gray-800 stroke-current" cx="18" cy="18" r="15.915" fill="black"
+                                stroke-width="4" />
+
+                            <!-- Donut Chart Segments -->
+                            <circle class="text-green-300 stroke-current" cx="18" cy="18" r="15.915" fill="transparent"
+                                stroke-width="4" stroke-dasharray="40 60" stroke-dashoffset="0" />
+                            <circle class="text-purple-400 stroke-current" cx="18" cy="18" r="15.915" fill="transparent"
+                                stroke-width="4" stroke-dasharray="25 75" stroke-dashoffset="-40" />
+                            <circle class="text-yellow-400 stroke-current" cx="18" cy="18" r="15.915" fill="transparent"
+                                stroke-width="4" stroke-dasharray="15 85" stroke-dashoffset="-65" />
+                            <circle class="text-pink-400 stroke-current" cx="18" cy="18" r="15.915" fill="transparent"
+                                stroke-width="4" stroke-dasharray="10 90" stroke-dashoffset="-80" />
+
+                            <!-- Inner Circle for Donut Effect -->
+                            <circle cx="18" cy="18" r="10" fill="black" />
+
+                            <!-- Centered Text -->
+                            <text x="18" y="20" fill="white" font-size="3" font-weight="bold"
+                                text-anchor="middle">{finsweet}</text>
+                        </svg>
+                    </div>
+
                 </div>
             </article>
 
         </section>
     </section>
 
+    <!-- CTA  -->
+    <section class="max-w-[1640px] mx-auto p-5 mt-30 ">
+        <div class="">
+            <img class="w-full brightness-50 bg-cover" src="../Images/CTAbg.png" alt="CTA">
+        </div>
+        <div class="">
+            <h2 class="text-white font-bold text-2xl">You can contribute to make the environment greener!</h2>
+            <button>Join as a volunteer</button>
+            <button>Donate</button>
+        </div>
+    </section>
 
 
 </body>
