@@ -18,7 +18,7 @@
     <style type="text/tailwindcss">
         @theme {
         /* Color */
-          --color-bgBtn: #1D2130;
+          --color-lightBlackText: #1D2130;
           --color-greyText: #525560;
           /* Font */
           --font-Ubuntu:Ubuntu;
@@ -27,20 +27,22 @@
 </head>
 
 <body>
-    <!-- NavBar -->
-    <nav>
+    <!-- Nav Bar -->
+    <nav class="sticky top-0 z-10 bg-white">
         <section class=" max-w-[1640px] mx-auto p-5 ">
             <!-- Items Navbar Logo Link and Button -->
             <article class=" flex items-center justify-between">
-                <h2 class="font-bold text-lg sm:text-2xl">{Finsweet</h2>
+                <a class="font-bold text-lg sm:text-2xl cursor-pointer" href="WhatWeDoPage.html">{Finsweet</a>
                 <ul class="flex justify-center items-center text-[10px] gap-5 sm:text-[16px]">
-                    <li class="font-bold"><a href="#Home">Home</a></li>
-                    <li class="text-greyText"><a href="#About us">About us</a></li>
-                    <li class="text-greyText"><a href=" #What We Do">What We Do</a></li>
-                    <li class="text-greyText"><a href=" #Media">Media</a></li>
-                    <li class="text-greyText"><a href=" #Contract">Contract</a></li>
+                    <li class="font-bold"><a href="HomePage.html">Home</a></li>
+                    <li class="text-greyText hover:text-black hover:underline"><a href="AboutPage.html">About us</a>
+                    </li>
+                    <li class="text-greyText hover:text-black hover:underline "><a href="WhatWeDoPage.html">What We
+                            Do</a></li>
+                    <li class="text-greyText hover:text-black hover:underline "><a href="MediaPage.html">Media</a></li>
+                    <li class="text-greyText hover:text-black hover:underline"><a href="#Contract">Contract</a></li>
                     <li><button
-                            class="bg-bgBtn cursor-pointer text-white px-[20px] py-[10px] rounded-[4px] sm:px-[32px] sm:py-[12px] ">Donate</button>
+                            class="bg-lightBlackText cursor-pointer text-white px-[20px] py-[10px] rounded-[4px] sm:px-[32px] sm:py-[12px] ">Donate</button>
                     </li>
                 </ul>
             </article>
@@ -56,9 +58,9 @@
                     <hr class="border-1 w-[75px]">
                 </div>
                 <div class=" h-full flex flex-col gap-5 ">
-                    <h3 class="text-[16px] font-bold tracking-widest ">KNOW ABOUT US</h3>
+                    <h3 class="text-[16px] font-bold tracking-widest ">WHAT WE DO</h3>
                     <div class=" flex flex-col gap-10 h-full">
-                        <h2 class="font-bold text-[48px] text-bgBtn leading-tight">We are working worldwide
+                        <h2 class="font-bold text-[48px] text-lightBlackText leading-tight">We are working worldwide
                         </h2>
                         <p class="text-greyText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
                             varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor
@@ -81,14 +83,14 @@
         <section class="max-w-[1640px] mx-auto px-5 py-15">
             <!-- Left Side -->
             <article class=" flex flex-col gap-10 h-full mt-10">
-                <h2 class="font-bold text-[48px] text-bgBtn leading-tight">What we do for the environment
+                <h2 class="font-bold text-[48px] text-lightBlackText leading-tight">What we do for the environment
                 </h2>
                 <div class="text-[#E5E5E5] grid grid-cols-3 w-full gap-5">
                     <!-- Icon And Func -->
                     <span class="flex gap-1 justify-center items-center w-[436px] mb-5  ">
                         <img class="self-start px-5" src="../Images/IconBuilding.png" alt="Icon Building">
                         <div class="flex flex-col leading-[28px] gap-5">
-                            <h3 class="font-bold text-[24px] text-bgBtn">Build Healthy Cities</h3>
+                            <h3 class="font-bold text-[24px] text-lightBlackText">Build Healthy Cities</h3>
                             <p class="text-greyText">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                 Suspendisse varius enim in eros elementum tristique.</p>
                         </div>
@@ -97,7 +99,7 @@
                     <span class="flex gap-1 justify-center items-center w-[436px]  mb-5 ">
                         <img class="self-start px-5" src="../Images/IconProtectLandWater.png" alt="Icon Plan Tree">
                         <div class="flex flex-col leading-[28px] gap-5">
-                            <h3 class="font-bold text-[24px] text-bgBtn">Protect Land and Water</h3>
+                            <h3 class="font-bold text-[24px] text-lightBlackText">Protect Land and Water</h3>
                             <p class="text-greyText">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                 Suspendisse varius enim in eros elementum tristique.</p>
                         </div>
@@ -106,7 +108,7 @@
                     <span class="flex gap-1 justify-center items-center w-[436px]  mb-5 ">
                         <img class="self-start px-5" src="../Images/IconTreePlan.png" alt="Icon Plan Tree">
                         <div class="flex flex-col leading-[28px] gap-5">
-                            <h3 class="font-bold text-[24px] text-bgBtn">Tree Plantation</h3>
+                            <h3 class="font-bold text-[24px] text-lightBlackText">Tree Plantation</h3>
                             <p class="text-greyText">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                 Suspendisse varius enim in eros elementum tristique.</p>
                         </div>
@@ -115,7 +117,7 @@
                     <span class="flex gap-1 justify-center items-center w-[436px]  mb-5 ">
                         <img class="self-start px-5" src="../Images/IconWater.png" alt="Icon Water">
                         <div class="flex flex-col leading-[28px] gap-5">
-                            <h3 class="font-bold text-[24px] text-bgBtn">Water sustainability</h3>
+                            <h3 class="font-bold text-[24px] text-lightBlackText">Water sustainability</h3>
                             <p class="text-greyText">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                 Suspendisse varius enim in eros elementum tristique.</p>
                         </div>
@@ -124,7 +126,7 @@
                     <span class="flex gap-1 justify-center items-center w-[436px]  mb-5 ">
                         <img class="self-start px-5" src="../Images/IconAnimal.png" alt="Icon Animal">
                         <div class="flex flex-col leading-[28px] gap-5">
-                            <h3 class="font-bold text-[24px] text-bgBtn">Animal Safety</h3>
+                            <h3 class="font-bold text-[24px] text-lightBlackText">Animal Safety</h3>
                             <p class="text-greyText">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                 Suspendisse varius enim in eros elementum tristique.</p>
                         </div>
@@ -133,7 +135,7 @@
                     <span class="flex gap-1 justify-center items-center w-[436px]  mb-5 ">
                         <img class="self-start px-5" src="../Images/IconTreePlant.png" alt="Icon Plant">
                         <div class="flex flex-col leading-[28px] gap-5">
-                            <h3 class="font-bold text-[24px] text-bgBtn">Biodiversity</h3>
+                            <h3 class="font-bold text-[24px] text-lightBlackText">Biodiversity</h3>
                             <p class="text-greyText">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                 Suspendisse varius enim in eros elementum tristique.</p>
                         </div>
@@ -145,12 +147,13 @@
     </section>
 
     <!-- Project -->
-    <section class="max-w-[1640px] mx-auto p-5 mt-30 flex flex-col gap-10 ">
+    <section class="max-w-[1640px] mx-auto p-5 mt-10 flex flex-col gap-10 ">
         <div class=" h-full flex flex-col gap-5 items-center ">
-            <div class=" flex flex-col gap-10 w-full items-center justify-center ">
+            <div class=" flex flex-col gap-2 w-full items-center justify-center ">
                 <h3 class="text-[16px] font-bold tracking-widest uppercase ">Projects we have done</h3>
-                <h2 class="font-bold text-[48px] w-[700px] text-bgBtn leading-tight">We are creating a sustainable
-                    <p class="font-bold text-[48px] w-[700px] text-bgBtn leading-tight text-center">society,
+                <h2 class="font-bold text-[48px] w-[700px] text-lightBlackText leading-tight">We are creating a
+                    sustainable
+                    <p class="font-bold text-[48px] w-[700px] text-lightBlackText leading-tight text-center">society,
                         for
                         everyone.</p>
                 </h2>
@@ -164,7 +167,7 @@
                 <div class="absolute top-[25%] left-[15%]  text-white w-[315px] h-[293px] flex flex-col gap-5">
                     <h2 class="text-2xl font-bold">Mission 40K: Tree plantation</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
-                    <button class=" cursor-pointer text-bgBtn w-[132px] h-[51px] rounded-[4px] bg-white ">See
+                    <button class=" cursor-pointer text-lightBlackText w-[132px] h-[51px] rounded-[4px] bg-white ">See
                         more</button>
                 </div>
             </div>
@@ -174,7 +177,7 @@
                 <div class="absolute top-[25%] left-[15%]  text-white w-[315px] h-[293px] flex flex-col gap-5">
                     <h2 class="text-2xl font-bold">Weekly cleanliness program in city</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
-                    <button class="cursor-pointer text-bgBtn w-[132px] h-[51px] rounded-[4px] bg-white ">See
+                    <button class="cursor-pointer text-lightBlackText w-[132px] h-[51px] rounded-[4px] bg-white ">See
                         more</button>
                 </div>
             </div>
@@ -184,7 +187,7 @@
                 <div class="absolute top-[25%] left-[15%]  text-white w-[315px] h-[293px] flex flex-col gap-5">
                     <h2 class="text-2xl font-bold">Wildlife safety program 2021</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
-                    <button class=" cursor-pointer text-bgBtn w-[132px] h-[51px] rounded-[4px] bg-white ">See
+                    <button class=" cursor-pointer text-lightBlackText w-[132px] h-[51px] rounded-[4px] bg-white ">See
                         more</button>
                 </div>
             </div>
@@ -213,7 +216,7 @@
         <article class="flex flex-col gap-10">
             <!-- Title -->
             <div class="flex text-[#E5E5E5] justify-center items-center gap-5">
-                <span class="text-bgBtn text-[40px] font-bold ">Read Our News</span>
+                <span class="text-lightBlackText text-[40px] font-bold ">Read Our News</span>
                 <hr class="border-1 flex-1 ">
             </div>
 
@@ -263,7 +266,7 @@
         <article class="flex flex-col gap-10">
             <!-- Title -->
             <div class="flex text-[#E5E5E5] justify-center items-center gap-5">
-                <span class="text-bgBtn text-[40px] font-bold ">Our Events</span>
+                <span class="text-lightBlackText text-[40px] font-bold ">Our Events</span>
                 <hr class="border-1 flex-1 ">
             </div>
 
@@ -280,7 +283,8 @@
                             </p>
                         </div>
                         <div class="flex justify-between gap-10">
-                            <p class="text-2xl text-bgBtn font-bold w-auto">Say no to plastic usage and save the
+                            <p class="text-2xl text-lightBlackText font-bold w-auto">Say no to plastic usage and save
+                                the
                                 planet</p>
                             <Button class="cursor-pointer bg-white p-5 rounded-full">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -303,7 +307,8 @@
                             </p>
                         </div>
                         <div class="flex justify-between gap-10">
-                            <p class="text-2xl text-bgBtn font-bold w-auto">Say no to plastic usage and save the
+                            <p class="text-2xl text-lightBlackText font-bold w-auto">Say no to plastic usage and save
+                                the
                                 planet</p>
                             <Button class="cursor-pointer bg-white p-5 rounded-full">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -401,7 +406,7 @@
                         <input class="border-[#EBF0F94D] w-full -mr-5 border-1 p-4 rounded-l-lg rounded-y-lg"
                             type="text" placeholder="Your Email">
                         <button
-                            class="text-bgBtn cursor-pointer w-auto bg-white self-center p-5 rounded-lg">Subscribe</button>
+                            class="text-lightBlackText cursor-pointer w-auto bg-white self-center p-5 rounded-lg">Subscribe</button>
                     </div>
                 </div>
 

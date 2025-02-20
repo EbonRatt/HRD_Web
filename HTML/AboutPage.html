@@ -18,7 +18,7 @@
     <style type="text/tailwindcss">
         @theme {
         /* Color */
-          --color-bgBtn: #1D2130;
+          --color-lightBlackText: #1D2130;
           --color-greyText: #525560;
           /* Font */
           --font-Ubuntu:Ubuntu;
@@ -27,20 +27,22 @@
 </head>
 
 <body>
-    <!-- NavBar -->
-    <nav>
+    <!-- Nav Bar -->
+    <nav class="sticky top-0 z-10 bg-white">
         <section class=" max-w-[1640px] mx-auto p-5 ">
             <!-- Items Navbar Logo Link and Button -->
             <article class=" flex items-center justify-between">
-                <h2 class="font-bold text-lg sm:text-2xl">{Finsweet</h2>
+                <a class="font-bold text-lg sm:text-2xl cursor-pointer" href="AboutPage.html">{Finsweet</a>
                 <ul class="flex justify-center items-center text-[10px] gap-5 sm:text-[16px]">
-                    <li class="font-bold"><a href="#Home">Home</a></li>
-                    <li class="text-greyText"><a href="#About us">About us</a></li>
-                    <li class="text-greyText"><a href=" #What We Do">What We Do</a></li>
-                    <li class="text-greyText"><a href=" #Media">Media</a></li>
-                    <li class="text-greyText"><a href=" #Contract">Contract</a></li>
+                    <li class="font-bold"><a href="HomePage.html">Home</a></li>
+                    <li class="text-greyText hover:text-black hover:underline"><a href="AboutPage.html">About us</a>
+                    </li>
+                    <li class="text-greyText hover:text-black hover:underline "><a href="WhatWeDoPage.html">What We
+                            Do</a></li>
+                    <li class="text-greyText hover:text-black hover:underline "><a href="MediaPage.html">Media</a></li>
+                    <li class="text-greyText hover:text-black hover:underline"><a href="#Contract">Contract</a></li>
                     <li><button
-                            class="bg-bgBtn cursor-pointer text-white px-[20px] py-[10px] rounded-[4px] sm:px-[32px] sm:py-[12px] ">Donate</button>
+                            class="bg-lightBlackText cursor-pointer text-white px-[20px] py-[10px] rounded-[4px] sm:px-[32px] sm:py-[12px] ">Donate</button>
                     </li>
                 </ul>
             </article>
@@ -58,12 +60,14 @@
                 <div class=" h-full flex flex-col gap-5 ">
                     <h3 class="text-[16px] font-bold tracking-widest ">KNOW ABOUT US</h3>
                     <div class=" flex gap-10 h-full">
-                        <h2 class="font-bold w-full text-[48px] text-bgBtn leading-tight">We help nature smile and
+                        <h2 class="font-bold w-full text-[48px] text-lightBlackText leading-tight">We help nature smile
+                            and
                             survive
                             everywhere
                         </h2>
                         <div class="flex flex-col gap-5">
-                            <h3 class="text-bgBtn text-2xl font-bold">Aenean faucibus nibh et justo cursus id rutrum
+                            <h3 class="text-lightBlackText text-2xl font-bold">Aenean faucibus nibh et justo cursus id
+                                rutrum
                                 lorem
                                 imperdiet. Nunc
                                 ut
@@ -86,7 +90,7 @@
         <section class=" max-w-[1640px] mx-auto px-10 py-20 relative">
             <!-- Image BG -->
             <article class=" bg-contain absolute w-full -top-[300px]">
-                <img class="w-full" src="../Images//BGAboutUs.png" alt="">
+                <img class="w-full" src="../Images//BGAboutUs.png" alt="BGAboutUs">
             </article>
 
             <!-- Container -->
@@ -134,12 +138,12 @@
                 <div class="flex flex-col gap-8">
                     <span class="tracking-widest font-bold w-[200px] text-greyText ">OUR SUPPORTERS</span>
                     <ul class="flex justify-between">
-                        <li><img src="../Images/Logo.png" alt=""></li>
-                        <li><img src="../Images/Logo (1).png" alt=""></li>
-                        <li><img src="../Images/Logo (2).png" alt=""></li>
-                        <li><img src="../Images/Logo (3).png" alt=""></li>
-                        <li><img src="../Images/Logo (4).png" alt=""></li>
-                        <li><img src="../Images/Logo (5).png" alt=""></li>
+                        <li><img src="../Images/Logo.png" alt="Logo"></li>
+                        <li><img src="../Images/Logo (1).png" alt="Logo1"></li>
+                        <li><img src="../Images/Logo (2).png" alt="Logo2"></li>
+                        <li><img src="../Images/Logo (3).png" alt="Logo3"></li>
+                        <li><img src="../Images/Logo (4).png" alt="Logo4"></li>
+                        <li><img src="../Images/Logo (5).png" alt="Logo5"></li>
                     </ul>
                 </div>
             </article>
@@ -149,40 +153,40 @@
     </section>
 
     <!-- Awards & Recognitions -->
-    <section class="max-w-[1640px] mx-auto p-5 mt-30">
+    <section class="max-w-[1640px] mx-auto p-5 mt-20">
         <section class="flex flex-col items-center">
-            <h2 class="text-5xl font-bold text-bgBtn">Awards & Recognitions</h2>
+            <h2 class="text-5xl font-bold text-lightBlackText">Awards & Recognitions</h2>
             <article class="flex justify-evenly w-full mt-20">
                 <!-- Item Awards -->
                 <div class="flex flex-col items-center gap-1">
                     <img src="../Images/Award badge Star.png" alt="badge Star">
-                    <h2 class="text-bgBtn text-2xl font-bold">2021</h2>
-                    <h3 class="text-bgBtn  font-bold">Best NGO Award</h3>
+                    <h2 class="text-lightBlackText text-2xl font-bold">2021</h2>
+                    <h3 class="text-lightBlackText  font-bold">Best NGO Award</h3>
                     <p class="text-greyText font-semibold uppercase">Berlin, Germany</p>
                 </div>
 
                 <!-- Item Awards -->
                 <div class="flex flex-col items-center gap-1">
-                    <img src="../Images/Award badge Star.png" alt="badge Star">
-                    <h2 class="text-bgBtn text-2xl font-bold">2021</h2>
-                    <h3 class="text-bgBtn  font-bold">Best NGO Award</h3>
-                    <p class="text-greyText font-semibold uppercase">Berlin, Germany</p>
+                    <img src="../Images/Award badge Cup.png" alt="badge Cup">
+                    <h2 class="text-lightBlackText text-2xl font-bold">2018</h2>
+                    <h3 class="text-lightBlackText  font-bold">Global Award</h3>
+                    <p class="text-greyText font-semibold uppercase">new york, usa</p>
                 </div>
 
                 <!-- Item Awards -->
                 <div class="flex flex-col items-center gap-1">
-                    <img src="../Images/Award badge Star.png" alt="badge Star">
-                    <h2 class="text-bgBtn text-2xl font-bold">2021</h2>
-                    <h3 class="text-bgBtn  font-bold">Best NGO Award</h3>
-                    <p class="text-greyText font-semibold uppercase">Berlin, Germany</p>
+                    <img src="../Images/Award badge Medol.png" alt="badge Medol">
+                    <h2 class="text-lightBlackText text-2xl font-bold">2014</h2>
+                    <h3 class="text-lightBlackText  font-bold">Foresto Award</h3>
+                    <p class="text-greyText font-semibold uppercase">New Delhi, India</p>
                 </div>
 
                 <!-- Item Awards -->
                 <div class="flex flex-col items-center gap-1">
-                    <img src="../Images/Award badge Star.png" alt="badge Star">
-                    <h2 class="text-bgBtn text-2xl font-bold">2021</h2>
-                    <h3 class="text-bgBtn  font-bold">Best NGO Award</h3>
-                    <p class="text-greyText font-semibold uppercase">Berlin, Germany</p>
+                    <img src="../Images/Award badge Union.png" alt="badge Union">
+                    <h2 class="text-lightBlackText text-2xl font-bold">2010</h2>
+                    <h3 class="text-lightBlackText  font-bold">Earth Saver Award</h3>
+                    <p class="text-greyText font-semibold uppercase">Vienna, Austria</p>
                 </div>
 
             </article>
@@ -229,7 +233,7 @@
         <section class="flex flex-col gap-10">
             <!-- Title Text -->
             <article class="flex flex-col gap-5 items-center">
-                <h1 class="text-4xl font-bold text-bgBtn">Meet our team</h1>
+                <h1 class="text-4xl font-bold text-lightBlackText">Meet our team</h1>
                 <span class="text-center text-gray-500">
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
@@ -245,7 +249,7 @@
                         <img src="../Images/Our Team/Profile1.png" alt="Profile1">
                     </div>
                     <h2 class="font-semibold text-base">Leonard John Davies</h2>
-                    <p class="text-bgBtn font-semibold text-xs">Cofounder, CEO</p>
+                    <p class="text-lightBlackText font-semibold text-xs">Cofounder, CEO</p>
                     <ul class="flex gap-5">
                         <li><img src="../Images/Icons/fb.png" alt="fb"></li>
                         <li><img src="../Images/Icons/Twitter.png" alt="Twitter"></li>
@@ -259,7 +263,7 @@
                         <img src="../Images/Our Team/Profile2.png" alt="Profile2">
                     </div>
                     <h2 class="font-semibold text-base">Francis Weber</h2>
-                    <p class="text-bgBtn font-semibold text-xs">Vice Chairman</p>
+                    <p class="text-lightBlackText font-semibold text-xs">Vice Chairman</p>
                     <ul class="flex gap-5">
                         <li><img src="../Images/Icons/fb.png" alt="fb"></li>
                         <li><img src="../Images/Icons/Twitter.png" alt="Twitter"></li>
@@ -273,7 +277,7 @@
                         <img src="../Images/Our Team/Profile3.png" alt="Profile3">
                     </div>
                     <h2 class="font-semibold text-base">Kyla Obrien</h2>
-                    <p class="text-bgBtn font-semibold text-xs">Head of Authority</p>
+                    <p class="text-lightBlackText font-semibold text-xs">Head of Authority</p>
                     <ul class="flex gap-5">
                         <li><img src="../Images/Icons/fb.png" alt="fb"></li>
                         <li><img src="../Images/Icons/Twitter.png" alt="Twitter"></li>
@@ -287,7 +291,7 @@
                         <img src="../Images/Our Team/Profile4.png" alt="Profile4">
                     </div>
                     <h2 class="font-semibold text-base">Adrian Dixon</h2>
-                    <p class="text-bgBtn font-semibold text-xs">Support Executive</p>
+                    <p class="text-lightBlackText font-semibold text-xs">Support Executive</p>
                     <ul class="flex gap-5">
                         <li><img src="../Images/Icons/fb.png" alt="fb"></li>
                         <li><img src="../Images/Icons/Twitter.png" alt="Twitter"></li>
@@ -301,7 +305,7 @@
                         <img src="../Images/Our Team/Profile5.png" alt="Profile5">
                     </div>
                     <h2 class="font-semibold text-base">Freddy Busby</h2>
-                    <p class="text-bgBtn font-semibold text-xs">Project Manager</p>
+                    <p class="text-lightBlackText font-semibold text-xs">Project Manager</p>
                     <ul class="flex gap-5">
                         <li><img src="../Images/Icons/fb.png" alt="fb"></li>
                         <li><img src="../Images/Icons/Twitter.png" alt="Twitter"></li>
@@ -315,7 +319,7 @@
                         <img src="../Images/Our Team/Profile6.png" alt="Profile6">
                     </div>
                     <h2 class="font-semibold text-base">Dale Banks</h2>
-                    <p class="text-bgBtn font-semibold text-xs">Accountatnt, Finance</p>
+                    <p class="text-lightBlackText font-semibold text-xs">Accountatnt, Finance</p>
                     <ul class="flex gap-5">
                         <li><img src="../Images/Icons/fb.png" alt="fb"></li>
                         <li><img src="../Images/Icons/Twitter.png" alt="Twitter"></li>
@@ -329,7 +333,7 @@
                         <img src="../Images/Our Team/Profile7.png" alt="Profile7">
                     </div>
                     <h2 class="font-semibold text-base">Miriam Middleton</h2>
-                    <p class="text-bgBtn font-semibold text-xs">Cofounder, CEO</p>
+                    <p class="text-lightBlackText font-semibold text-xs">Cofounder, CEO</p>
                     <ul class="flex gap-5">
                         <li><img src="../Images/Icons/fb.png" alt="fb"></li>
                         <li><img src="../Images/Icons/Twitter.png" alt="Twitter"></li>
@@ -343,7 +347,7 @@
                         <img src="../Images/Our Team/Profile8.png" alt="Profile8">
                     </div>
                     <h2 class="font-semibold text-base">Ellen Walton</h2>
-                    <p class="text-bgBtn font-semibold text-xs">Vice Chairman</p>
+                    <p class="text-lightBlackText font-semibold text-xs">Vice Chairman</p>
                     <ul class="flex gap-5">
                         <li><img src="../Images/Icons/fb.png" alt="fb"></li>
                         <li><img src="../Images/Icons/Twitter.png" alt="Twitter"></li>
@@ -376,7 +380,7 @@
         <article class="flex flex-col gap-10">
             <!-- Title -->
             <div class="flex text-[#E5E5E5] justify-center items-center gap-5">
-                <span class="text-bgBtn text-[40px] font-bold ">Read Our News</span>
+                <span class="text-lightBlackText text-[40px] font-bold ">Read Our News</span>
                 <hr class="border-1 flex-1 ">
             </div>
 
@@ -426,7 +430,7 @@
         <article class="flex flex-col gap-10">
             <!-- Title -->
             <div class="flex text-[#E5E5E5] justify-center items-center gap-5">
-                <span class="text-bgBtn text-[40px] font-bold ">Our Events</span>
+                <span class="text-lightBlackText text-[40px] font-bold ">Our Events</span>
                 <hr class="border-1 flex-1 ">
             </div>
 
@@ -443,7 +447,8 @@
                             </p>
                         </div>
                         <div class="flex justify-between gap-10">
-                            <p class="text-2xl text-bgBtn font-bold w-auto">Say no to plastic usage and save the
+                            <p class="text-2xl text-lightBlackText font-bold w-auto">Say no to plastic usage and save
+                                the
                                 planet</p>
                             <Button class="cursor-pointer bg-white p-5 rounded-full">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -466,7 +471,8 @@
                             </p>
                         </div>
                         <div class="flex justify-between gap-10">
-                            <p class="text-2xl text-bgBtn font-bold w-auto">Say no to plastic usage and save the
+                            <p class="text-2xl text-lightBlackText font-bold w-auto">Say no to plastic usage and save
+                                the
                                 planet</p>
                             <Button class="cursor-pointer bg-white p-5 rounded-full">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -564,7 +570,7 @@
                         <input class="border-[#EBF0F94D] w-full -mr-5 border-1 p-4 rounded-l-lg rounded-y-lg"
                             type="text" placeholder="Your Email">
                         <button
-                            class="text-bgBtn cursor-pointer w-auto bg-white self-center p-5 rounded-lg">Subscribe</button>
+                            class="text-lightBlackText cursor-pointer w-auto bg-white self-center p-5 rounded-lg">Subscribe</button>
                     </div>
                 </div>
 
