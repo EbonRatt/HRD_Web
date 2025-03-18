@@ -1,4 +1,5 @@
 import Input from "@/components/MyUi/Input";
+import SideBarComponent from "@/components/MyUi/SideBarComponent";
 import {
   Select,
   SelectContent,
@@ -6,16 +7,13 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { getAllBook, getAllBookCategories } from "@/Service/BookService";
-import Image from "next/image";
 import React from "react";
-import CardBook from "./_components/CardBook";
-import SideBarComponent from "@/components/MyUi/SideBarComponent";
+import { getAllCartoon, getAllCartoonGenre } from "@/Service/CartoonService";
+import CardCartoon from "./_components/CardCartoon";
 
-const BookCategoriesPage = async () => {
-  const { payload: bookCategories } = await getAllBookCategories();
-  const { payload: book } = await getAllBook();
-
+const OldSchoolCartoonPage = async () => {
+  const { payload: cartoonGenre } = await getAllCartoonGenre();
+  const { payload: cartoon } = await getAllCartoon();
   return (
     <section className="flex ">
       <SideBarComponent />
@@ -26,7 +24,7 @@ const BookCategoriesPage = async () => {
           <figure className="flex flex-col ">
             <div className="flex justify-between">
               <span className="w-fit mb-5 px-8 py-4 bg-gray-200 text-darkGreen font-bold rounded-3xl">
-                HomePage
+                Old School Cartoon
               </span>
               <Select>
                 <SelectTrigger className="w-[180px] bg-gray-200 p-4">
@@ -34,12 +32,9 @@ const BookCategoriesPage = async () => {
                 </SelectTrigger>
                 <SelectContent>
                   {/* ON API */}
-                  {bookCategories.map((category) => (
-                    <SelectItem
-                      key={category.id}
-                      value={`${category.book_cate_name}`}
-                    >
-                      {category.book_cate_name}
+                  {cartoonGenre.map((genre) => (
+                    <SelectItem key={genre.id} value={`${genre.cartoon_genre}`}>
+                      {genre.cartoon_genre}
                     </SelectItem>
                   ))}
                 </SelectContent>
@@ -50,14 +45,11 @@ const BookCategoriesPage = async () => {
           </figure>
           {/*List Cards */}
           <article className="py-14 px-14  overflow-y-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 container mx-auto px-6 max-h-[600px]">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 container mx-auto px-6 max-h-[600px]">
               {/* List Book */}
-              {/* {book.map((thisBook) => (
-                <CardBook key={thisBook.id} book={thisBook} />
-              ))} */}
-              <CardBook key={book[0].id} book={book[0]} />
-              <CardBook key={book[0].id} book={book[0]} />
-              <CardBook key={book[0].id} book={book[0]} />
+              {cartoon.map((thisCartoon) => (
+                <CardCartoon key={thisCartoon.id} cartoon={thisCartoon} />
+              ))}
               {/* <p className="text-center p-4 text-gray-500">No books available.</p> */}
             </div>
           </article>
@@ -67,4 +59,4 @@ const BookCategoriesPage = async () => {
   );
 };
 
-export default BookCategoriesPage;
+export default OldSchoolCartoonPage;

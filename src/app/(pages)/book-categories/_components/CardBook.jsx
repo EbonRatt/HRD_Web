@@ -1,32 +1,40 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 const CardBook = ({ book }) => {
   return (
-    <div className="bg-[#f5f7f8] rounded-2xl shadow-lg flex items-center w-[420px]">
-      <div className="w-1/3 flex-shrink-0">
-        <img
-          className="rounded-lg"
-          src={book.image}
-          alt=""
-          width={120}
-          height={180}
-          objectfit="cover"
-        />
+    <>
+      <div className="flex gap-5 items-center bg-gray-100 p-6 rounded-xl shadow-lg w-full max-w-lg mt-[30%]">
+        <div className=" flex flex-col justify-between gap-2 min-w-[50%]  ">
+          <div className="relative w-full h-[150px]">
+            <Image
+              src={book.image}
+              alt=""
+              width={150}
+              height={100}
+              className="rounded-lg shadow-md w-full h-[300px] object-cover absolute top-[-150px] left-0"
+            />
+          </div>
+          <Link href={""}>
+            <button className=" bg-darkGrey text-darkBlue w-full text-sm  px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+              READ FULL ARTICLE
+            </button>
+          </Link>
+        </div>
+
+        <div className="ml-6">
+          <h2 className="text-lg text-darkBlue font-semibold">
+            {book.book_title}
+          </h2>
+          <p className="text-darkBlue text-sm mt-2">{book.description}</p>
+        </div>
       </div>
-      <div className="w-2/3">
-        <h3 className="text-lg font-semibold text-[#0b3954]">{book.title}</h3>
-        <p className="mt-2 text-gray-600 text-sm line-clamp-3 mr-2">
-          {book.description}
-        </p>
-        <Link href={`/read-full-article/${book.id}`}>
-          <button className="mt-4 bg-blue-500 text-white text-sm px-4 py-2 rounded-full shadow-md hover:bg-blue-600 transition">
-            Read Full Article
-          </button>
-        </Link>
-      </div>
-    </div>
+    </>
   );
 };
+
+{
+}
 
 export default CardBook;
