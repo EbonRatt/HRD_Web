@@ -5,7 +5,7 @@ import React from "react";
 
 const SideBarComponent = () => {
   return (
-    <aside className="bg-whiteSmoke w-[25%] h-screen min-h-full flex flex-col items-center justify-between">
+    <aside className="bg-whiteSmoke w-[25%] flex flex-col items-center justify-between">
       <section>
         {/* Profile */}
         <article className="flex flex-col items-center gap-1.5 my-10">

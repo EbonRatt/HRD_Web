@@ -29,10 +29,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${merriweather.variable} antialiased bg-gray-200`}
       >
-        <main className="flex gap-[4%]">
-          <SideBarComponent />
-          {children}
-        </main>
+        {children}
       </body>
     </html>
   );
