@@ -26,9 +26,9 @@ const ContentComponent = ({ item, type }) => {
           {/*List Cards */}
           <article className="py-14 px-14 no-scrollbar overflow-y-auto">
             <div
-              className={`grid grid-cols-1 md:grid-cols-${
-                item[0]?.book_title ? "2" : "3"
-              } gap-10 container mx-auto px-6 max-h-[600px]`}
+              className={`grid ${
+                item?.[0]?.book_title ? "grid-cols-2" : "grid-cols-3"
+              } gap-10 container mx-auto px-1 max-h-[600px]`}
             >
               {/* List Book */}
               {item.map(

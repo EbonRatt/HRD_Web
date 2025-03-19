@@ -11,6 +11,7 @@ import React from "react";
 import {
   getAllCartoon,
   getAllCartoonGenre,
+  getCartoonByGenre,
   getCartoonByTitle,
 } from "@/Service/CartoonService";
 import CardCartoon from "./_components/CardCartoon";
@@ -22,11 +23,20 @@ const OldSchoolCartoonPage = async ({ searchParams }) => {
     searchParams.search
   );
   const { payload: cartoon } = await getAllCartoon();
+  const { payload: cartoonByGenre } = await getCartoonByGenre(
+    searchParams.query
+  );
   return (
     <section>
       <ContentComponent
         type={cartoonGenre}
-        item={cartoonByTitle.length > 0 ? cartoonByTitle : cartoon}
+        item={
+          cartoonByTitle.length > 0
+            ? cartoonByTitle
+            : cartoonByGenre.length > 0
+            ? cartoonByGenre
+            : cartoon
+        }
       />
     </section>
   );

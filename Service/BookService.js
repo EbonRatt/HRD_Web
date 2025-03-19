@@ -36,4 +36,21 @@ const getBookByTitle = async (title) => {
   } catch (error) {}
 };
 
-export { getAllBookCategories, getAllBook, getBookById, getBookByTitle };
+const getBookByCategory = async (query) => {
+  try {
+    const data = await fetch(
+      `https://nextjs-homework005.vercel.app/api/book?query=${query}`
+    );
+    const result = await data.json();
+    console.log(result);
+    return result;
+  } catch (error) {}
+};
+
+export {
+  getAllBookCategories,
+  getAllBook,
+  getBookById,
+  getBookByTitle,
+  getBookByCategory,
+};

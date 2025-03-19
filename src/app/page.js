@@ -1,6 +1,7 @@
 import Input from "@/components/MyUi/input";
 import SideBarComponent from "@/components/MyUi/SideBarComponent";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
           <article className=" bg-whiteSmoke h-screen p-[5%] rounded-2xl w-full min-h-full ">
             {/* Title HomePage */}
             <figure className="flex flex-col">
-              <span className="w-fit mb-5 px-8 py-4 bg-gray-200 text-darkGreen font-bold rounded-3xl">
+              <span className="w-fit mb-5 px-6 py-2 bg-gray-200 text-darkGreen font-bold rounded-3xl">
                 HomePage
               </span>
               <hr className="border-darkGreen"></hr>
@@ -20,16 +21,18 @@ export default function Home() {
             {/* Cards */}
             <div className="flex items-center justify-center gap-20 mt-20">
               {/* Card Books */}
-              <article className="w-72 h-80 relative">
-                <div className="rounded-3xl hover:brightness-75">
-                  <Image
-                    src="https://i.pinimg.com/originals/37/3e/76/373e7691ecf16e725e49890edbca1b57.jpg"
-                    alt="Black Monster's profile"
-                    width={300}
-                    height={300}
-                    className="rounded-3xl"
-                  />
-                </div>
+              <article className="w-72 h-full relative">
+                <Link href={"/book-categories"}>
+                  <div className="rounded-3xl hover:brightness-75">
+                    <Image
+                      src="/static/images/image.png"
+                      alt="Black Monster's profile"
+                      width={400}
+                      height={400}
+                      className="rounded-3xl"
+                    />
+                  </div>
+                </Link>
                 <div className="flex gap-3 absolute top-1 bg-white p-1 rounded-full ml-3 mt-2 w-24">
                   <svg
                     viewBox="0 0 24 24"
@@ -69,16 +72,18 @@ export default function Home() {
                 </div>
               </article>
               {/* Card Cartoon */}
-              <article className="w-72 h-80 relative">
-                <div className="hover:brightness-75">
-                  <Image
-                    src="https://i.pinimg.com/originals/37/3e/76/373e7691ecf16e725e49890edbca1b57.jpg"
-                    width={300}
-                    height={300}
-                    alt="Black Monster's profile"
-                    className="rounded-3xl"
-                  />
-                </div>
+              <article className="w-72 h-full relative">
+                <Link href={"/old-school-cartoons"}>
+                  <div className="hover:brightness-75">
+                    <Image
+                      src="/static/images/image (1).png"
+                      width={400}
+                      height={400}
+                      alt="Black Monster's profile"
+                      className="rounded-3xl"
+                    />
+                  </div>
+                </Link>
                 <div className="flex gap-3 absolute top-1 bg-white p-1 rounded-full ml-3 mt-2 w-24">
                   <svg
                     viewBox="0 0 24 24"
