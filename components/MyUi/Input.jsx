@@ -1,6 +1,15 @@
-import React from "react";
+"use client";
+
+import { usePathname, useRouter } from "next/navigation";
 
 const Input = () => {
+  const router = useRouter();
+  const pathName = usePathname();
+
+  function handleChange(e) {
+    router.push(`${pathName}?search=${e.target.value}`);
+  }
+
   return (
     <article className="flex items-center gap-3 bg-whiteSmoke rounded-2xl p-4">
       <svg
@@ -21,6 +30,7 @@ const Input = () => {
         type="text"
         className="text-darkBlue text-xl w-full border-none focus:ring-0"
         placeholder="Search book or category"
+        onChange={handleChange}
       />
     </article>
   );

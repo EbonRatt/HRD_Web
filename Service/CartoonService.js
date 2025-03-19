@@ -28,4 +28,14 @@ const getCartoonById = async (id) => {
   } catch (error) {}
 };
 
-export { getAllCartoonGenre, getAllCartoon, getCartoonById };
+const getCartoonByTitle = async (title) => {
+  try {
+    const data = await fetch(
+      `https://nextjs-homework005.vercel.app/api/cartoon?search=${title}`
+    );
+    const result = await data.json();
+    return result;
+  } catch (error) {}
+};
+
+export { getAllCartoonGenre, getAllCartoon, getCartoonById, getCartoonByTitle };
