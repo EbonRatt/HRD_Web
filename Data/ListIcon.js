@@ -60,6 +60,7 @@ export const listIcon = [
     titleLink: "Old School Cartoons",
   },
   {
+    link: "/",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -79,6 +80,7 @@ export const listIcon = [
     titleLink: "Movies & TV Shows",
   },
   {
+    link: "/",
     titleLink: "Music",
     icon: (
       <svg
@@ -98,6 +100,7 @@ export const listIcon = [
     ),
   },
   {
+    link: "/",
     titleLink: "Photography",
     icon: (
       <svg
@@ -122,6 +125,7 @@ export const listIcon = [
     ),
   },
   {
+    link: "/",
     titleLink: "Sports & Fitness",
     icon: (
       <svg
@@ -141,6 +145,7 @@ export const listIcon = [
     ),
   },
   {
+    link: "/",
     titleLink: "Technology & Gadgets",
 
     icon: (
@@ -161,6 +166,7 @@ export const listIcon = [
     ),
   },
   {
+    link: "/",
     titleLink: "Travel & Exploration",
 
     icon: (
@@ -182,6 +188,7 @@ export const listIcon = [
   },
 
   {
+    link: "/",
     titleLink: "Writing & Journaling",
     icon: (
       <svg

@@ -42,7 +42,6 @@ const getBookByCategory = async (query) => {
       `https://nextjs-homework005.vercel.app/api/book?query=${query}`
     );
     const result = await data.json();
-    console.log(result);
     return result;
   } catch (error) {}
 };

@@ -1,12 +1,3 @@
-import Input from "@/components/MyUi/Input";
-import SideBarComponent from "@/components/MyUi/SideBarComponent";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import React from "react";
 import {
   getAllCartoon,
@@ -14,7 +5,6 @@ import {
   getCartoonByGenre,
   getCartoonByTitle,
 } from "@/Service/CartoonService";
-import CardCartoon from "./_components/CardCartoon";
 import ContentComponent from "@/components/MyUi/ContentComponent";
 
 const OldSchoolCartoonPage = async ({ searchParams }) => {

@@ -1,4 +1,6 @@
+"use client";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const CardCartoon = ({ cartoon }) => {
@@ -6,8 +8,17 @@ const CardCartoon = ({ cartoon }) => {
     const newDate = date.split("-");
     return newDate[0];
   };
+
+  const router = useRouter();
+
+  function handleLink(id) {
+    router.push(`/read-full-article/${id}?type=cartoon`);
+  }
   return (
-    <article className="flex flex-col justify-around">
+    <article
+      className="flex flex-col justify-around"
+      onClick={() => handleLink(cartoon.id)}
+    >
       <Image
         alt=""
         className="rounded-2xl object-cover"

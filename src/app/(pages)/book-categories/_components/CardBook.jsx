@@ -1,8 +1,16 @@
+"use client";
+
 import Image from "next/image";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const CardBook = ({ book }) => {
+  const router = useRouter();
+
+  function handleLink(id) {
+    router.push(`/read-full-article/${id}?type=book`);
+  }
+
   return (
     <>
       <div className="flex gap-5 items-center bg-gray-100 p-6 rounded-xl shadow-lg w-full max-w-lg mt-[30%]">
@@ -16,11 +24,12 @@ const CardBook = ({ book }) => {
               className="rounded-lg shadow-md w-full h-[300px] object-cover absolute top-[-150px] left-0"
             />
           </div>
-          <Link href={""}>
-            <button className=" bg-darkGrey text-darkBlue w-full text-sm font-semibold  px-4 py-2 rounded-lg hover:cursor-pointer">
-              READ FULL ARTICLE
-            </button>
-          </Link>
+          <button
+            onClick={() => handleLink(book.id)}
+            className=" bg-darkGrey text-darkBlue w-full text-sm font-semibold  px-4 py-2 rounded-lg hover:cursor-pointer"
+          >
+            READ FULL ARTICLE
+          </button>
         </div>
 
         <div className="ml-6">

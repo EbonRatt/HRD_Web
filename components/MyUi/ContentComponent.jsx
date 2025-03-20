@@ -16,9 +16,6 @@ const ContentComponent = ({ item, type }) => {
           {/* Title HomePage */}
           <figure className="flex flex-col ">
             <div className="flex justify-between">
-              <span className="w-fit mb-5 px-6 py-2 bg-gray-200 text-darkGreen font-bold rounded-3xl">
-                HomePage
-              </span>
               <SelectComponent type={type} />
             </div>
             <hr className="border-darkGreen"></hr>
