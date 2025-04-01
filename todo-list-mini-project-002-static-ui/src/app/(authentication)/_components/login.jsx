@@ -2,13 +2,34 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { LoginSchema } from "@/lib/zod/userSchema";
+import { LoginService } from "@/services/auth/user.service";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { KeyRound, Mail } from "lucide-react";
 import Link from "next/link";
 import React from "react";
+import { useForm } from "react-hook-form";
 
 export default function LoginComponent() {
+  const {
+    register,
+    reset,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: zodResolver(LoginSchema),
+  });
+
+  function handleLoginUser(userData) {
+    LoginService(userData);
+    // reset();
+  }
+
   return (
-    <form className="space-y-6 bg-white">
+    <form
+      className="space-y-6 bg-white"
+      onSubmit={handleSubmit(handleLoginUser)}
+    >
       {/* email */}
       <div>
         <Label
@@ -22,7 +43,11 @@ export default function LoginComponent() {
           type="text"
           placeholder="Please type your email"
           className={`bg-ghost-white py-2.5 px-4 rounded-lg w-full text-light-steel-blue/90`}
+          {...register("userEmail")}
         />
+        <span className="text-red-500 text-sm mt-4">
+          {errors?.userEmail?.message}
+        </span>
       </div>
 
       {/* password */}
@@ -38,7 +63,11 @@ export default function LoginComponent() {
           type="password"
           placeholder="Please type your password"
           className={`bg-ghost-white py-2.5 px-4 rounded-lg w-full text-light-steel-blue/90`}
+          {...register("userPassword")}
         />
+        <span className="text-red-500 text-sm mt-4">
+          {errors?.userPassword?.message}
+        </span>
       </div>
 
       {/* sign in button */}
