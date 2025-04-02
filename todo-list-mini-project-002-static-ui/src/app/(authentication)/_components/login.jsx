@@ -3,12 +3,13 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { LoginSchema } from "@/lib/zod/userSchema";
-import { LoginService } from "@/services/auth/user.service";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { KeyRound, Mail } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 import { useForm } from "react-hook-form";
+import { signIn } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 export default function LoginComponent() {
   const {
@@ -20,9 +21,19 @@ export default function LoginComponent() {
     resolver: zodResolver(LoginSchema),
   });
 
-  function handleLoginUser(userData) {
-    LoginService(userData);
-    // reset();
+  const router = useRouter();
+
+  async function handleLoginUser(userData) {
+    const res = await signIn("credentials", {
+      redirect: false,
+      ...userData,
+    });
+
+    if (res?.status == 200) {
+      router.push("/");
+    }
+
+    reset();
   }
 
   return (

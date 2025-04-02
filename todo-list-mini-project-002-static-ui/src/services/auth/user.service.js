@@ -27,23 +27,16 @@ export const RegisterService = async (user) => {
 };
 
 export const LoginService = async (user) => {
-  const { userEmail, userPassword } = user;
-  const postUser = {
-    email: userEmail,
-    password: userPassword,
-  };
-
   try {
     const res = await fetch(`${baseUrl}/auth/login`, {
       method: "POST",
-      body: JSON.stringify(postUser),
+      body: JSON.stringify(user),
       headers: {
         accept: "*/*",
         "Content-Type": "application/json",
       },
     });
     const data = await res.json();
-    console.log(data.payload.token);
     return data;
   } catch (e) {
     console.log("Error : ", e);
