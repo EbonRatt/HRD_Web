@@ -16,7 +16,7 @@ export const authOption = {
           throw new Error(userInfo?.detail);
         }
         const { payload } = userInfo;
-        return payload.token;
+        return payload;
       },
     }),
   ],

@@ -1,5 +1,5 @@
+import { authOption } from "@/app/api/auth/[...nextauth]/route";
 import { getServerSession } from "next-auth";
-import { authOption } from "./auth/[...nextauth]/route";
 
 export default async function headerToken() {
   // getServerSession is used to get the token that provided from the api

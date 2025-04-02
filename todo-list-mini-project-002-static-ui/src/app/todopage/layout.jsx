@@ -1,6 +1,6 @@
 import { Provider } from "@/context/provider";
-import SideBar from "@/components/SideBar";
-import "./globals.css";
+import "../globals.css";
+import Logo from "@/components/logo";
 
 export const metadata = {
   title: {
@@ -14,10 +14,7 @@ export default function AuthenticationLayout({ children }) {
   return (
     <html lang="en">
       <body className="text-charcoal">
-        <div className="container flex bg-amber-300  min-w-full min-h-screen">
-          <SideBar />
-          <Provider>{children}</Provider>
-        </div>
+        <Provider>{children}</Provider>
       </body>
     </html>
   );

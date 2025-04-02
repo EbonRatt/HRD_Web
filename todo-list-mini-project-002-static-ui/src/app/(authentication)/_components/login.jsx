@@ -30,7 +30,7 @@ export default function LoginComponent() {
     });
 
     if (res?.status == 200) {
-      router.push("/");
+      router.push("/todopage");
     }
 
     reset();
