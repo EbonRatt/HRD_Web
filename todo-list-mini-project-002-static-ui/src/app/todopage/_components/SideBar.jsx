@@ -1,13 +1,10 @@
 import React from "react";
 import Logo from "../../../components/logo";
-import { LogOut } from "lucide-react";
-import { getAllWorkspaces } from "@/services/todo/todo.service";
 import WorkspacesComponentList from "./WorkspacesComponentList";
 import FavoriteWorkspacesComponentList from "./FavoriteWorkspacesComponentList";
+import LogoutComponent from "./LogoutComponent";
 
-const SideBar = async () => {
-  const workspaceData = await getAllWorkspaces();
-
+const SideBar = async ({ workspaceData }) => {
   function randomColor() {
     const colors = ["blue", "green", "purple", "orange", "lightblue", "red"];
     let randomColor = colors[Math.floor(Math.random() * colors.length)];
@@ -32,10 +29,7 @@ const SideBar = async () => {
       <FavoriteWorkspacesComponentList workspace={workSpaceDataWithColor} />
 
       {/* LoginOut */}
-      <article className="px-10 mt-10 flex gap-2 text-green-500">
-        <LogOut />
-        <span className="font-semibold">Logout</span>
-      </article>
+      <LogoutComponent />
     </aside>
   );
 };

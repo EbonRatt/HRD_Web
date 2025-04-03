@@ -41,6 +41,9 @@ export const authOption = {
       session.user = token;
       return session;
     },
+    async redirect({ url, baseUrl }) {
+      return baseUrl;
+    },
   },
 };
 const handler = NextAuth(authOption);

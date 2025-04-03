@@ -1,6 +1,21 @@
 "use server";
 
+import { getToken } from "next-auth/jwt";
 import { baseUrl } from "../constants";
+import headerToken from "@/api/headerToken";
+
+export const getUserService = async () => {
+  const header = await headerToken();
+  try {
+    const res = await fetch(`${baseUrl}/user`, {
+      headers: header,
+    });
+    const data = await res.json();
+    return data;
+  } catch (e) {
+    console.log("Error : ", e);
+  }
+};
 
 export const RegisterService = async (user) => {
   const { userName, userEmail, userPassword } = user;

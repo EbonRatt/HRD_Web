@@ -1,3 +1,4 @@
+"use client";
 import {
   Select,
   SelectContent,
@@ -8,24 +9,25 @@ import {
 import { Clock, Ellipsis } from "lucide-react";
 import React from "react";
 
-export default function CardComponent() {
+export default function CardComponent({ task }) {
+  // const { taskTitle, taskDetails, tag, status, startDate, endDate } = task;
   return (
     <div className="border border-gray-300 rounded-xl mt-8">
       <div className="p-5">
         <div className="flex justify-between">
-          <h2 className="text-xl font-bold capitalize">HRD Design</h2>
+          <h2 className="text-xl font-bold capitalize">{task?.taskTitle}</h2>
           <Ellipsis />
         </div>
 
         {/* task detials */}
         <p className="line-clamp-2 text-light-steel-blue my-2 h-12">
-          Description
+          {task?.taskDetails}
         </p>
 
         <div className="flex justify-between items-center mt-4">
           {/* tag */}
           <p className="bg-purple-100 text-purple-500 py-1.5 px-3 rounded-lg">
-            DESIGN
+            {task?.tag}
           </p>
 
           {/* status */}
@@ -50,7 +52,7 @@ export default function CardComponent() {
 
         {/* date */}
         <p className="flex gap-3 text-light-steel-blue">
-          <Clock size={22} /> Mar 23, 2025
+          <Clock size={22} /> {task?.endDate}
         </p>
       </div>
     </div>

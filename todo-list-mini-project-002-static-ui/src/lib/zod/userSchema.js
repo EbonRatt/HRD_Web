@@ -15,5 +15,5 @@ export const LoginSchema = z.object({
 });
 
 export const formCreateWorkspaceSchema = z.object({
-  workSpaceName: z.string().min(1, "Character must be more than 1"),
+  workspaceName: z.string().min(1, "Character must be more than 1"),
 });

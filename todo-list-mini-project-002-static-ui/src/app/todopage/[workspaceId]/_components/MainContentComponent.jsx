@@ -1,13 +1,42 @@
-import React from "react";
-import ListCard from "./ListCard";
+"use client";
+
+import React, { useEffect, useState } from "react";
+import ListCard from "../../_components/ListCard";
 import { PlusSquare, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const MainContent = () => {
+const MainContentComponent = ({ tasksListByWorkspaceId, titleWorkSpace }) => {
+  const [taskNotYet, setTaskNotYet] = useState([]);
+  const [taskInProcessing, setTaskInProcessing] = useState([]);
+  const [taskComplete, setTaskComplete] = useState([]);
+
+  useEffect(() => {
+    setTaskNotYet(
+      tasksListByWorkspaceId.filter(
+        (taskStatus) => taskStatus.status == "NOT_STARTED"
+      )
+    );
+    setTaskInProcessing(
+      tasksListByWorkspaceId.filter(
+        (taskStatus) => taskStatus.status == "IN_PROGRESS"
+      )
+    );
+    setTaskComplete(
+      tasksListByWorkspaceId.filter(
+        (taskStatus) => taskStatus.status == "FINISHED"
+      )
+    );
+  }, [titleWorkSpace]);
+
+  console.log("Task Not Yet", taskNotYet);
+  console.log("Task In Processing", taskInProcessing);
+  console.log("Task Complete", taskComplete);
+
   return (
     <section className=" flex flex-col gap-5 relative">
+      {/* Header Title WorkSpace And Star */}
       <article className="flex justify-between items-center">
-        <h2 className="text-4xl font-semibold">HRD Design</h2>
+        <h2 className="text-4xl font-semibold">{titleWorkSpace}</h2>
         <div className="bg-gray-300 p-1 rounded-xl">
           <Star size={30} />
         </div>
@@ -19,10 +48,10 @@ const MainContent = () => {
             Not Started
           </span>
           <hr className="border-2 text-red-500 mt-2 rounded-3xl"></hr>
-          <div className="overflow-y-scroll max-h-[600px]">
-            <ListCard />
-            <ListCard />
-            <ListCard />
+          <div className="overflow-y-scroll min-h-[600px] max-h-[600px]">
+            {taskNotYet.map((task) => (
+              <ListCard key={task.taskId} task={task} />
+            ))}
           </div>
         </div>
 
@@ -55,4 +84,4 @@ const MainContent = () => {
   );
 };
 
-export default MainContent;
+export default MainContentComponent;

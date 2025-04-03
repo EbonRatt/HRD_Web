@@ -1,5 +1,6 @@
+"use client";
+import { insertWorkSpaceAction } from "@/action/workspacesAction";
 import { formCreateWorkspaceSchema } from "@/lib/zod/userSchema";
-import { createWorkspaces } from "@/services/todo/todo.service";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { SquarePlus } from "lucide-react";
 import { useState } from "react";
@@ -16,8 +17,8 @@ export default function PopupForm() {
     resolver: zodResolver(formCreateWorkspaceSchema),
   });
 
-  async function handleCreateWorkSpace(userData) {
-    createWorkspaces(userData);
+  function handleCreateWorkSpace(data) {
+    insertWorkSpaceAction(data);
     reset();
   }
 
@@ -63,14 +64,14 @@ export default function PopupForm() {
               <div className="mb-4">
                 <input
                   type="text"
-                  id="workSpaceName"
-                  name="workSpaceName"
+                  id="workspaceName"
+                  name="workspaceName"
                   placeholder="Please type your workspace name"
                   className="w-full p-2 border rounded-md focus:outline-none focus:border-blue-500"
-                  {...register("workSpaceName")}
+                  {...register("workspaceName")}
                 />
                 <span className="text-red-500 text-sm mt-4">
-                  {errors?.workSpaceName?.message}
+                  {errors?.workspaceName?.message}
                 </span>
               </div>
 

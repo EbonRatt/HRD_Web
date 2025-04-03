@@ -12,7 +12,7 @@ function FavoriteWorkspacesComponentList({ workspace }) {
       </div>
       <ul className=" overflow-y-scroll max-h-[250px]">
         {workspace
-          .filter((workspace) => workspace.isFavorite == false)
+          .filter((workspace) => workspace.isFavorite == true)
           .map((workspaceFavorite) => (
             <li key={workspaceFavorite.workspaceId} className="rounded-sm">
               <WorkSpaceComponent data={workspaceFavorite} />
