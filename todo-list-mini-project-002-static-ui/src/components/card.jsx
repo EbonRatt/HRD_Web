@@ -34,10 +34,10 @@ export default function CardComponent() {
       </div>
 
       {/* progress */}
-      <div className="flex justify-between items-center border-t border-t-gray-300 p-5">
+      <div className="flex justify-between items-center border-t border-t-gray-300 p-6">
         <Select>
           <SelectTrigger
-            className={`w-36 truncate border-watermelon-red text-watermelon-red`}
+            className={`w-38 truncate border-watermelon-red text-watermelon-red`}
           >
             <SelectValue placeholder={"NOT_STARTED"} />
           </SelectTrigger>

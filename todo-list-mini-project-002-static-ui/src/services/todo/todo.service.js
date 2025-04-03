@@ -13,3 +13,21 @@ export const getAllWorkspaces = async () => {
   const data = await res.json();
   return data;
 };
+
+export const createWorkspaces = async (workspace) => {
+  const newWorkSpace = {
+    workspaceName: workspace,
+  };
+
+  const header = await headerToken();
+
+  console.log(header);
+  const res = await fetch(`${baseUrl}/workspace`, {
+    headers: header,
+    method: "POST",
+    body: JSON.stringify(newWorkSpace),
+  });
+
+  const data = await res.json();
+  return data;
+};

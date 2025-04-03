@@ -1,8 +1,9 @@
 import React from "react";
 import Logo from "../../../components/logo";
-import { SquarePlus, Star } from "lucide-react";
-import WorkSpaceComponent from "./WorkSpaceComponent";
+import { LogOut } from "lucide-react";
 import { getAllWorkspaces } from "@/services/todo/todo.service";
+import WorkspacesComponentList from "./WorkspacesComponentList";
+import FavoriteWorkspacesComponentList from "./FavoriteWorkspacesComponentList";
 
 const SideBar = async () => {
   const workspaceData = await getAllWorkspaces();
@@ -20,40 +21,20 @@ const SideBar = async () => {
   );
 
   return (
-    <aside className="flex flex-col w-[30%] min-h-full gap-5">
+    <aside className="flex flex-col w-[30%] min-h-full">
       {/* Logo Profile */}
       <article className=" h-[25%] flex justify-center items-center">
         <Logo />
       </article>
       {/* Workspace */}
-      <article className="flex flex-col gap-5">
-        <div className="flex font-bold text-gray-500 justify-between px-10 items-center">
-          <p className="text-2xl">Workspace</p>
-          <SquarePlus />
-        </div>
-        <ul className=" overflow-y-scroll max-h-[250px]">
-          {workSpaceDataWithColor.map((workspace) => (
-            <li key={workspace.workspaceId} className="rounded-sm">
-              <WorkSpaceComponent data={workspace} />
-            </li>
-          ))}
-        </ul>
-      </article>
+      <WorkspacesComponentList workspace={workSpaceDataWithColor} />
       {/* Favorite */}
-      <article className="flex flex-col gap-5">
-        <div className="flex font-bold text-gray-500 justify-between px-10 items-center">
-          <p className="text-2xl">Favorite</p>
-          <Star />
-        </div>
-        <ul className=" overflow-y-scroll max-h-[250px]">
-          {workSpaceDataWithColor
-            .filter((workspace) => workspace.isFavorite == true)
-            .map((workspaceFavorite) => (
-              <li key={workspaceFavorite.workspaceId} className="rounded-sm">
-                <WorkSpaceComponent data={workspaceFavorite} />
-              </li>
-            ))}
-        </ul>
+      <FavoriteWorkspacesComponentList workspace={workSpaceDataWithColor} />
+
+      {/* LoginOut */}
+      <article className="px-10 mt-10 flex gap-2 text-green-500">
+        <LogOut />
+        <span className="font-semibold">Logout</span>
       </article>
     </aside>
   );
